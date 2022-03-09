@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class RomanNumeralConverterSpec {
+public class RomanNumeralConverterTest {
 
     @Test
     @DisplayName("RomanNumeralConvert should throw an exception when input value is out of range")
