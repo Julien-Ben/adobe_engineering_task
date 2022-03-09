@@ -45,4 +45,8 @@ The endpoint will return a 400 status code and a string error message in the fol
 The class `RomanNumeralConverter` responsible for converting an integer to a roman numeral has been tested using Junit 5.
 Tests are located inside `src\test\java\com.example.aem_engineering_test`.
 
+To run the tests, use :
+
+``mvn test``
+
 I did not consider integration testing relevant for this endpoint.
