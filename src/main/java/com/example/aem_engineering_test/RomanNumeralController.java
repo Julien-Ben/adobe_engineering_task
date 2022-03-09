@@ -12,6 +12,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 @Controller
 public class RomanNumeralController {
+    //Configure the behavior of the API endpoint
     @GetMapping("/romannumeral")
     @ResponseBody
     public ResponseEntity<?> romanNumeralEndpoint(@RequestParam(name = "query", required = true) int inputVal) {
@@ -22,6 +23,7 @@ public class RomanNumeralController {
                 RomanNumeralConverter.romanNumeralConvert(inputVal)), HttpStatus.OK);
     }
 
+    //Exception handler returning a bad request if the provided value is not an integer.
     @ResponseBody
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<?>  handleMissingParams(MethodArgumentTypeMismatchException ex) {
@@ -29,6 +31,7 @@ public class RomanNumeralController {
         return new ResponseEntity<>(name + " parameter must be an integer", HttpStatus.BAD_REQUEST);
     }
 
+    //Exception handler returning a bad request if the parameter "query" is not specified.
     @ResponseBody
     @ExceptionHandler(MissingServletRequestParameterException.class)
     public ResponseEntity<?>  handleMissingParams(MissingServletRequestParameterException ex) {
