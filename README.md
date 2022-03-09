@@ -1,6 +1,7 @@
 # Adobe Engineering Task : Roman Numeral convertor
 
-The aim of task was to build an API endpoint 
+The aim of this task was to build an API endpoint which converts an integer to its Roman Numeral representation (a String).
+I used Spring Boot to create the endpoint because I was already a bit familiar with the framework. And I made the algorithm using Java.
  
 ### Roman Numerals Specification
 
